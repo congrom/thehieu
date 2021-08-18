@@ -1,3 +1,4 @@
+<?php include('inc/conn.php') ?>
 <div id="main">
   		<table>
   			<thead>
@@ -13,18 +14,18 @@
 
   				<?php 
   					$query = "SELECT * FROM product";
-  					$rs = mysqli_query( $conn, $query );
+  					$rs = mysqli_query( $conn, $query);
   					if( mysqli_num_rows( $rs ) > 0  )
   						while( $row = mysqli_fetch_assoc( $rs ) ){
   				?>
   					<tr>
-  						<td><?= $row['id'] ?></td>
+  						<td><?= $row['Id'] ?></td>
   						<td><img class="anh-sp" src="../images/<?= $row['anh']?>"/></td>
   						<td><?= $row['ten']?></td>
   						<td><?= $row['giatien'] . "USD"?> </td> 
               <!-- chu y ten phai match voi ten cot trong db -->
-  						<td><a href="suasp.php?id=<?= $row['id']?>">Edit</a></td>
-  						<td><a href="?idxoa=<?= $row['id']?>">Delete</a></td>
+  						<td><a href="suasp.php?id=<?= $row['Id']?>">Edit</a></td>
+  						<td><a href="?idxoa=<?= $row['Id']?>">Delete</a></td>
   					</tr>
 
   				<?php 

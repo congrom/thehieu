@@ -1,5 +1,5 @@
 <?php
-include('inc/conn.php');
+require_once('inc/conn.php');
 include('inc/header.php');
 ?>
 <div class="row">
@@ -16,13 +16,12 @@ $product_per_page =6;
 $offset =$product_per_page * $page; //
 $sql ="SELECT * FROM product LIMIT $offset,$product_per_page"; //gioi han
 $rs=mysqli_query($conn, $sql);
-if(mysqli_num_rows($rs) > 0){
+if(mysqli_num_rows($rs) > 0){ 
 	while ($row = mysqli_fetch_assoc($rs)) {
 		?>
-		<a href="single-product.php?id=<?php echo $row['id'] ?>" class='product'>
+		<a href="single-product.php?id=<?php echo $row['Id'] ?>" class='product'>
 		<h2 class="product-title"><?php echo $row['ten'] ?></h2>
 		<div class="product-image"><img src="images/<?php echo $row['anh'] ?>">
-			
 		</div>
 		<p class="product-price"><?php echo $row['giatien']. "USD"?></p>
 	    </a>

@@ -29,7 +29,7 @@ session_start(); //bat session
       </form>      
 
       <div class="product-content">
-        <?php  echo $row['noi dung'] ?>
+      
       </div><!-- end product content -->
 
 <?php 

@@ -19,7 +19,7 @@ include('inc/header.php');
 
 		while ($row = mysqli_fetch_assoc($rs) ) {
 			?>
-			   <a href="single-product.php?id=<?php echo $row['id']?>" class="product" >
+			   <a href="single-product.php?id=<?php echo $row['Id']?>" class="product" >
 			   	<h2 class="produc-title"><?php echo $row['ten'] ?></h2>
 			   	<div class="product-image"><img src="images/<?php echo $row['anh'] ?>" /></div>
 			   	<p class="product-price"><?php echo $row['giatien'] . " USD " ?></p>

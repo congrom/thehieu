@@ -50,7 +50,7 @@ if( !empty( $_SESSION['cart'] ) )
       foreach( $_SESSION['cart'] as $item ):
     
       ?>
-          <a href="single-product.php?id=<?php echo $item['id']?>" class="product">
+          <a href="single-product.php?id=<?php echo $item['Id']?>" class="product">
             <h2 class="product-title"><?php echo $item['ten'] ?></h2>
             <div class="product-image"><img src="images/<?php echo $item['anh'] ?>" /></div>
             <p class="product-price"><?php echo $item['giatien'] . " USD "  ?></p>

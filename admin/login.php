@@ -4,10 +4,10 @@
         include('../inc/conn.php' );
         $username = $_POST['name'];
         $password = $_POST['pass'];
-        $user = mysqli_fetch_assoc( mysqli_query( $conn , "SELECT * FROM user WHERE username= '{$username}' AND password='{$password}'"));
+        $user = mysqli_fetch_assoc( mysqli_query( $conn , "SELECT * FROM user WHERE userName= '{$username}' AND passWord='{$password}'"));
         if($user){
-            $_SESSION['user'] = $user['username'];
-            header('location:index.php');
+            $_SESSION['User'] = $user['username'];
+            header('location:../index.php');
             die;
         }
         else{
